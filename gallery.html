@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Gallery ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+<div class="logo">
+❤️ For Salina
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="menu" id="menu">
+
+<a href="home.html">🏠 Home</a>
+<a href="letter.html">💌 Letter</a>
+<a href="gallery.html">📸 Gallery</a>
+<a href="questions.html">💕 Questions</a>
+<a href="date.html">💖 Date</a>
+<a href="video.html">🎥 Video</a>
+<a href="music.html">🎵 Music</a>
+<a href="secret.html">🔒 Secret</a>
+<a href="surprise.html">🎁 Surprise</a>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1>📸 Our Beautiful Memories ❤️</h1>
+
+<p style="text-align:center;">
+Every picture tells a story, and every story reminds me of you. 💕
+</p>
+
+<div class="gallery">
+
+<img src="images/photo1.png" onclick="openImage(this)" alt="Photo 1">
+
+<img src="images/photo2.png" onclick="openImage(this)" alt="Photo 2">
+
+<img src="images/photo3.png" onclick="openImage(this)" alt="Photo 3">
+
+<img src="images/photo4.png" onclick="openImage(this)" alt="Photo 4">
+
+<img src="images/photo5.png" onclick="openImage(this)" alt="Photo 5">
+
+<img src="images/photo6.png" onclick="openImage(this)" alt="Photo 6">
+
+<img src="images/photo7.png" onclick="openImage(this)" alt="Photo 7">
+
+<img src="images/photo8.png" onclick="openImage(this)" alt="Photo 8">
+
+</div>
+
+</div>
+
+<!-- Popup -->
+
+<div class="popup" id="popup">
+
+<span class="close" onclick="closePopup()">&times;</span>
+
+<img id="popupImage">
+
+</div>
+
+<footer>
+
+Made with ❤️ for Salina
+
+</footer>
+
+<button id="topBtn" onclick="topPage()">
+⬆
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

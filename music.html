@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Music ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.music-card{
+max-width:500px;
+margin:40px auto;
+padding:30px;
+text-align:center;
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(12px);
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.album{
+width:220px;
+height:220px;
+border-radius:50%;
+margin:auto;
+overflow:hidden;
+border:8px solid white;
+animation:spin 10s linear infinite;
+animation-play-state:paused;
+}
+
+.album.playing{
+animation-play-state:running;
+}
+
+.album img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes spin{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+.music-btn{
+
+margin:10px;
+padding:15px 35px;
+font-size:18px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.music-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+#quote{
+
+margin-top:25px;
+font-size:22px;
+color:#ff2d75;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">❤️ For Salina</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+<a href="home.html">🏠 Home</a>
+<a href="letter.html">💌 Letter</a>
+<a href="gallery.html">📸 Gallery</a>
+<a href="questions.html">💕 Questions</a>
+<a href="date.html">💖 Date</a>
+<a href="video.html">🎥 Videos</a>
+<a href="music.html">🎵 Music</a>
+<a href="secret.html">🔒 Secret</a>
+<a href="surprise.html">🎁 Surprise</a>
+</div>
+
+</nav>
+
+<div class="music-card">
+
+<h1>🎵 Our Song 🎵</h1>
+
+<div class="album" id="album">
+    <img src="photo1.png" alt="your Photo">
+</div>
+
+<br>
+
+<audio id="loveMusic">
+    <source src="timro-pratiksha.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" onclick="playSong()">
+▶ Play
+</button>
+
+<button class="music-btn" onclick="pauseSong()">
+⏸ Pause
+</button>
+
+<br><br>
+
+<input
+type="range"
+min="0"
+max="1"
+step="0.1"
+value="1"
+oninput="document.getElementById('loveMusic').volume=this.value;">
+
+<h2 id="quote">
+❤️ Every song reminds me of you.
+</h2>
+
+</div>
+
+<script>
+
+window.toggleMenu=function(){
+
+document.getElementById("menu").classList.toggle("show");
+
+}
+
+const music=document.getElementById("loveMusic");
+const album=document.getElementById("album");
+const quote=document.getElementById("quote");
+
+const quotes=[
+
+"❤️ Every song reminds me of you.",
+
+"🥰 You're my favorite melody.",
+
+"💕 My heart beats to your rhythm.",
+
+"🌹 You make every moment beautiful.",
+
+"😍 I fall for you every single day.",
+
+"❤️ You're my forever playlist.",
+
+"💖 Home is wherever you are.",
+
+"✨ I never get tired of seeing you."
+
+];
+
+function playSong(){
+
+music.play();
+
+album.classList.add("playing");
+
+quote.innerHTML=quotes[Math.floor(Math.random()*quotes.length)];
+
+if(typeof heartRain==="function") heartRain();
+if(typeof fireworks==="function") fireworks();
+if(typeof confetti==="function") confetti();
+
+}
+
+function pauseSong(){
+
+music.pause();
+
+album.classList.remove("playing");
+
+}
+
+</script>
+
+</body>
+</html>

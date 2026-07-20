@@ -1,0 +1,1019 @@
+/* =====================================
+   FOR SALINA ❤️ V2
+   PART 1 - GENERAL & NAVIGATION
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe4ef,#fff7fb);
+    color:#444;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    background:#ff4f8b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    gap:10px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    background:#ff69b4;
+    padding:10px 15px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#ff1493;
+    transform:translateY(-2px);
+}
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+
+.menu{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#ff4f8b;
+flex-direction:column;
+padding:15px;
+}
+
+.menu.show{
+display:flex;
+}
+
+.menu a{
+margin:5px 0;
+text-align:center;
+width:100%;
+}
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* ================= HEADINGS ================= */
+
+h1{
+    color:#ff1493;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+h2{
+    color:#ff4f8b;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ================= BUTTONS ================= */
+
+button,
+input[type=submit]{
+
+background:#ff1493;
+color:white;
+border:none;
+padding:14px 30px;
+border-radius:15px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover,
+input[type=submit]:hover{
+
+background:#ff0066;
+transform:scale(1.05);
+
+}
+
+/* ================= INPUTS ================= */
+
+input,
+textarea{
+
+width:100%;
+padding:12px;
+border:2px solid pink;
+border-radius:12px;
+margin:12px 0;
+font-size:16px;
+
+}
+
+textarea{
+min-height:140px;
+}
+
+/* ================= IMAGES ================= */
+
+img{
+max-width:100%;
+display:block;
+border-radius:18px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+text-align:center;
+padding:30px;
+color:#ff1493;
+font-size:18px;
+}
+/* =====================================
+   PART 2 - GALLERY, CARDS & QUESTIONS
+===================================== */
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 30px rgba(255,20,147,.35);
+}
+
+/* ================= IMAGE POPUP ================= */
+
+.popup{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+    border:5px solid white;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* ================= LOVE CARDS ================= */
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin:25px 0;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* ================= LOVE LETTER ================= */
+
+.letter{
+    background:#fff0f6;
+    border-left:8px solid #ff1493;
+    padding:30px;
+    border-radius:20px;
+    font-size:20px;
+    line-height:2;
+}
+
+/* ================= QUESTIONS ================= */
+
+.question{
+    background:#fff5fa;
+    padding:20px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.question label{
+    display:block;
+    color:#ff1493;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.question input,
+.question textarea{
+    background:white;
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.progress{
+    width:100%;
+    background:#ffd6e8;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+.progress-bar{
+    width:0%;
+    height:15px;
+    background:#ff1493;
+    transition:.4s;
+}
+
+/* ================= LOVE REASONS ================= */
+
+.love-box{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    margin-top:30px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+#loveReason{
+    color:#ff1493;
+    font-size:24px;
+    margin:20px 0;
+    min-height:60px;
+}
+
+.reason-btn{
+    background:#ff1493;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.reason-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+height:auto;
+}
+
+.letter{
+font-size:18px;
+padding:20px;
+}
+
+.question{
+padding:15px;
+}
+
+}
+/* =====================================
+   PART 3 - DATE, VIDEO & MUSIC
+===================================== */
+
+/* ================= DATE PAGE ================= */
+
+.date-container{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.date-container h1{
+    color:#ff1493;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.date-container p{
+    font-size:24px;
+    color:#ff4f8b;
+    margin-bottom:35px;
+}
+
+.buttons{
+    position:relative;
+    height:320px;
+}
+
+#yesBtn,
+#yes{
+    background:linear-gradient(45deg,#ff1493,#ff69b4);
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:15px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,20,147,.4);
+}
+
+#yesBtn:hover,
+#yes:hover{
+    transform:scale(1.08);
+}
+
+#noBtn,
+#no{
+    background:#777;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:15px;
+    font-size:22px;
+    cursor:pointer;
+    position:absolute;
+    left:60%;
+    top:0;
+    transition:.2s;
+}
+
+/* ================= SUCCESS CARD ================= */
+
+.success-box{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.success-box h1{
+    color:#ff1493;
+    font-size:55px;
+}
+
+.success-box p{
+    font-size:24px;
+}
+
+/* ================= VIDEO ================= */
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.record-btn{
+    margin-top:20px;
+}
+
+/* ================= MUSIC ================= */
+
+.music-player{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+audio{
+    width:100%;
+    margin-top:20px;
+}
+
+/* ================= HEART ANIMATION ================= */
+
+.floating-heart{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    animation:floatHeart 8s linear forwards;
+    z-index:9999;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(0) scale(.8);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* ================= FIREWORK ================= */
+
+.firework{
+    position:fixed;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    animation:explode .8s ease-out forwards;
+}
+
+@keyframes explode{
+
+0%{
+transform:scale(.2);
+opacity:1;
+}
+
+100%{
+transform:scale(8);
+opacity:0;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.date-container h1{
+font-size:32px;
+}
+
+.date-container p{
+font-size:18px;
+}
+
+#yesBtn,
+#yes,
+#noBtn,
+#no{
+font-size:18px;
+padding:15px 30px;
+}
+
+.buttons{
+height:250px;
+}
+
+.music-player{
+padding:20px;
+}
+
+}
+/* =====================================
+   PART 4 - ANIMATIONS & FINAL TOUCHES
+===================================== */
+
+/* Fade Animation */
+.fade{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating Hearts Background */
+.bg-heart{
+    position:fixed;
+    bottom:-40px;
+    color:#ff69b4;
+    pointer-events:none;
+    animation:bgFloat 10s linear infinite;
+    opacity:.7;
+}
+
+@keyframes bgFloat{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Glass Card */
+.glass{
+    background:rgba(255,255,255,.35);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.4);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    box-shadow:0 15px 35px rgba(255,20,147,.35);
+    margin:auto;
+}
+
+.hero h1{
+    margin-top:25px;
+    font-size:50px;
+}
+
+.hero p{
+    color:#ff4f8b;
+    font-size:22px;
+}
+
+/* Cute Buttons */
+.pink-btn{
+    display:inline-block;
+    margin:10px;
+    background:linear-gradient(45deg,#ff1493,#ff69b4);
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.pink-btn:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/* Countdown */
+#countdown{
+    margin-top:20px;
+    font-size:26px;
+    color:#ff1493;
+    font-weight:bold;
+}
+
+/* Scroll Button */
+#topBtn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#ff1493;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+}
+
+#topBtn:hover{
+    background:#ff0066;
+}
+
+/* Footer */
+footer{
+    margin-top:60px;
+    background:#ff4f8b;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:18px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero{
+padding:50px 15px;
+}
+
+.hero img{
+width:170px;
+height:170px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.pink-btn{
+display:block;
+width:100%;
+margin:10px 0;
+}
+
+#countdown{
+font-size:20px;
+}
+
+}
+input[type=password]{
+
+width:280px;
+padding:12px;
+font-size:18px;
+border:none;
+border-radius:10px;
+outline:none;
+text-align:center;
+margin-top:15px;
+
+}
+
+button{
+
+background:#ff1493;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#ff69b4;
+transform:scale(1.05);
+
+}
+/* LOGIN PAGE */
+
+.login-page{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ffd6ea,#ffeef8);
+overflow:hidden;
+
+}
+
+.login-box{
+
+width:90%;
+max-width:420px;
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+animation:pop .8s;
+
+}
+
+.login-box h1{
+
+color:#ff1493;
+margin-bottom:15px;
+
+}
+
+.login-box p{
+
+color:#555;
+
+line-height:1.6;
+
+}
+
+.login-box input{
+
+width:100%;
+
+padding:15px;
+
+font-size:18px;
+
+border:2px solid #ffb6d5;
+
+border-radius:12px;
+
+outline:none;
+
+margin-top:20px;
+
+}
+
+.login-box input:focus{
+
+border-color:#ff1493;
+
+}
+
+.login-box button{
+
+margin-top:20px;
+
+padding:15px 35px;
+
+background:#ff1493;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.login-box button:hover{
+
+background:#ff4fa0;
+
+transform:scale(1.05);
+
+}
+
+#error{
+
+margin-top:15px;
+
+font-weight:bold;
+
+color:red;
+
+}
+
+.fade{
+
+animation:fadeout 1s forwards;
+
+}
+
+@keyframes fadeout{
+
+to{
+
+opacity:0;
+
+}
+
+}
+
+@keyframes pop{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+.love-video{
+
+width:100%;
+
+max-width:800px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(255,20,147,.3);
+
+margin-top:20px;
+
+}
+/* =========================
+   INSTAGRAM REELS
+========================= */
+
+.reels-page{
+    margin:0;
+    background:#000;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+    height:100vh;
+}
+
+.reels-container{
+    width:100%;
+}
+
+.reel{
+    position:relative;
+    width:100%;
+    height:100vh;
+    scroll-snap-align:start;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+}
+
+.reel video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.caption{
+    position:absolute;
+    bottom:80px;
+    left:20px;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    text-shadow:2px 2px 10px black;
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Play Button */
+
+.play-icon{
+
+position:absolute;
+
+font-size:70px;
+
+color:white;
+
+opacity:.7;
+
+pointer-events:none;
+
+transition:.3s;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.caption{
+
+font-size:18px;
+bottom:60px;
+left:15px;
+
+}
+
+}
+/* ❤️ Double Tap Heart */
+
+@keyframes likeHeart{
+
+0%{
+transform:translate(-50%,-50%) scale(.2);
+opacity:0;
+}
+
+50%{
+transform:translate(-50%,-50%) scale(1.3);
+opacity:1;
+}
+
+100%{
+transform:translate(-50%,-150%) scale(1);
+opacity:0;
+}
+
+}

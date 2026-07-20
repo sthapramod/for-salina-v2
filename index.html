@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Secret ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-box">
+
+<h1>🔒 Welcome ❤️</h1>
+
+<p>
+This little world was made especially for someone very special.
+</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<br><br>
+
+<button onclick="checkPassword()">
+❤️ Enter
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+const pass=document.getElementById("password").value;
+
+if(pass==="Gu khau"){
+
+document.body.classList.add("fade");
+
+setTimeout(function(){
+
+window.location.href="home.html";
+
+},1000);
+
+}else{
+
+document.getElementById("error").innerHTML=
+"❌ Wrong Password";
+
+}
+
+}
+
+document.getElementById("password")
+.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+checkPassword();
+
+}
+
+});
+
+</script>
+
+
+</body>
+</html>

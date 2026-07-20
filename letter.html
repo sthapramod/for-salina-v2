@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Letter ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+<div class="logo">
+❤️ For Salina
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="menu" id="menu">
+
+<a href="home.html">🏠 Home</a>
+<a href="letter.html">💌 Letter</a>
+<a href="gallery.html">📸 Gallery</a>
+<a href="questions.html">💕 Questions</a>
+<a href="date.html">💖 Date</a>
+<a href="video.html">🎥 Video</a>
+<a href="music.html">🎵 Music</a>
+<a href="secret.html">🔒 Secret</a>
+<a href="surprise.html">🎁 Surprise</a>
+
+</div>
+
+</nav>
+
+<div class="container glass">
+
+<h1>💌 A Letter For You ❤️</h1>
+
+<div class="letter">
+
+<p id="typing"></p>
+
+</div>
+
+<br>
+
+<center>
+
+<button class="pink-btn" onclick="showLoveReason()">
+💕 Tell Me Another Reason
+</button>
+
+</center>
+
+<br>
+
+<div class="love-box">
+
+<h2>❤️ Reasons Why I miss You</h2>
+
+<p id="loveReason">
+
+Click the button above ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+Made with ❤️ for Salina
+
+</footer>
+
+<button id="topBtn" onclick="topPage()">⬆</button>
+
+<script src="script.js"></script>
+
+<script>
+
+const message = `
+
+Dear Salina ❤️,
+
+Every day with you is my favorite day.
+
+Your smile makes my day brighter.
+Your laugh makes me happy.
+You make my world a better place.
+
+Thank you for always being yourself.
+
+No matter where life takes us,
+I will always care about you.
+
+I hope this little website reminds you
+how special you are to me.
+
+❤️ Forever Yours ❤️
+
+`;
+
+let i = 0;
+
+function typeLetter(){
+
+    if(i < message.length){
+
+        document.getElementById("typing").innerHTML += message.charAt(i);
+
+        i++;
+
+        setTimeout(typeLetter,40);
+
+    }
+
+}
+
+typeLetter();
+
+</script>
+
+</body>
+</html>
